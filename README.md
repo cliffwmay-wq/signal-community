@@ -8,7 +8,7 @@ This project keeps the user-supplied Signal 0.2.0 community release intact and a
 - [`source/`](source/) — safely extracted, reviewable copies of the original skill and plugin.
 - [`chatgpt/`](chatgpt/) — Signal ChatGPT plugin 0.2.1, adapted from the original chat skill.
 - [`community-release/`](community-release/) — updated three-path release notes, sharing copy, and product preview.
-- [`releases/`](releases/) — generated ChatGPT plugin ZIP and complete community kit ZIP.
+- [GitHub Releases](https://github.com/cliffwmay-wq/signal-community/releases) — downloadable ChatGPT plugin ZIP and complete community kit ZIP.
 - [`SOURCE.md`](SOURCE.md) — hashes and preservation record.
 
 The original Claude ZIPs are unchanged. The ChatGPT edition adapts platform wording and packaging while retaining the editorial method and inspector. It is an addition to Signal, not a Temper rebrand.
