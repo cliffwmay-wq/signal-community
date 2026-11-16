@@ -1,0 +1,19 @@
+{
+  "name": "my-editor",
+  "displayName": "Signal \u2014 Personal Editorial Studio",
+  "version": "0.2.0",
+  "description": "Free, open-source editing that protects your voice and meaning. Includes Voice DNA, editorial audit, and optional text inspection.",
+  "author": {
+    "name": "Signal contributors"
+  },
+  "keywords": [
+    "writing",
+    "editing",
+    "voice",
+    "voice-dna",
+    "style",
+    "unicode",
+    "privacy"
+  ],
+  "license": "MIT"
+}

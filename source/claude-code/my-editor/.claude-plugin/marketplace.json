@@ -1,0 +1,14 @@
+{
+  "name": "signal-community-marketplace",
+  "description": "Free community tools for better, more personal writing",
+  "owner": {
+    "name": "Signal contributors"
+  },
+  "plugins": [
+    {
+      "name": "my-editor",
+      "source": "./",
+      "description": "Signal: the personal editorial studio for Claude"
+    }
+  ]
+}

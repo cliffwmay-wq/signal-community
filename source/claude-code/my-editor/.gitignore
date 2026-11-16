@@ -1,0 +1,13 @@
+# Author content: never commit writing samples or personal voice profiles
+VOICE_PROFILE.md
+**/VOICE_PROFILE.md
+profiles/
+private/
+my-samples/
+*.private.md
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.DS_Store
+.pytest_cache/

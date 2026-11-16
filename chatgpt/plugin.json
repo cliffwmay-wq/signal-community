@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "signal-community",
+  "version": "0.2.1",
+  "description": "A free personal editorial studio that improves writing while protecting the author's meaning and voice.",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "voice", "voice-dna", "community"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Signal — Community Edition",
+        "shortDescription": "Your words. Your voice. Better writing.",
+        "longDescription": "Edit, compose, and audit writing without flattening its meaning or voice. Build an optional, editable Voice DNA profile from your own samples. Inspect literal text artifacts when local execution is available. No Signal account or telemetry.",
+        "developerName": "Signal contributors",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Use Signal to tighten this draft without changing my point or making it sound generic.",
+          "Use Signal to make a provisional Voice DNA profile from my original writing samples. Show evidence and do not save it yet.",
+          "Use Signal to audit this passage. Show specific problems and what already works before rewriting."
+        ],
+        "brandColor": "#1D5347",
+        "composerIcon": "./assets/mark.svg",
+        "logo": "./assets/mark.svg"
+      }
+    }
+  }
+}

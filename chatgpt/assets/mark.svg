@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Signal mark">
+  <rect width="128" height="128" rx="26" fill="#1D5347"/>
+  <path d="M27 70 69 40" stroke="#F7F4ED" stroke-width="10" stroke-linecap="round"/>
+  <path d="M58 91 101 59" stroke="#E8A25E" stroke-width="10" stroke-linecap="round"/>
+</svg>
