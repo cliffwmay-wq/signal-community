@@ -2,7 +2,7 @@
 
 **Your words. Your voice. Better writing.**
 
-This is a ChatGPT companion to the user-supplied Signal 0.2.0 community release. It keeps the original editorial purpose and workflows: Compress, Compose, Polish, Snapshot, Audit, optional Voice DNA, and literal text inspection where a local runtime is available. The companion is version **0.2.1** to distinguish this added platform package from the unchanged 0.2.0 Claude ZIPs.
+This is a ChatGPT companion to the user-supplied Signal 0.2.0 community release. It keeps the original editorial purpose and workflows: Compress, Compose, Polish, Snapshot, Audit, optional Voice DNA, and literal text inspection where a local runtime is available. The companion is version **0.2.1** to distinguish this added platform package from the Claude source packages.
 
 Signal works without a Voice DNA profile. Paste a draft and ask it to tighten the writing while preserving your meaning. A profile is optional, author-reviewed, and never saved by default.
 

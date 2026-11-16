@@ -1,16 +1,15 @@
-# Signal — free community release, 0.2.1 companion kit
+# Signal — free community release, 0.2.2 kit
 
 **Your words. Your voice. Better writing.** Signal helps people edit, compose, and examine their own writing while protecting meaning and voice. It remains free, MIT licensed, and independent community software.
 
-This kit preserves both original **0.2.0 Claude packages byte for byte** and adds a **0.2.1 ChatGPT companion**. The added edition follows the same editorial contract, optional Voice DNA method, and evidence-based audit. It is a platform adaptation, not a Temper rebrand.
+This kit packages the **0.2.0 Claude skill and Claude Code plugin source** with the internal sharing draft removed, and includes the **0.2.1 ChatGPT companion**. The added edition follows the same editorial contract, optional Voice DNA method, and evidence-based audit. It is a platform adaptation, not a Temper rebrand.
 
 | File | Use |
 | --- | --- |
-| `Signal-Claude-Skill.zip` | Original Claude chat skill, version 0.2.0. |
-| `Signal-Claude-Code-Plugin.zip` | Original Claude Code plugin, version 0.2.0, with slash commands and local inspector. |
+| `Signal-Claude-Skill.zip` | Claude chat skill, repackaged from version 0.2.0 source. |
+| `Signal-Claude-Code-Plugin.zip` | Claude Code plugin, repackaged from version 0.2.0 source without the internal sharing draft. |
 | `Signal-ChatGPT-Plugin-v0.2.1.zip` | New ChatGPT desktop plugin companion with the same core workflows. |
 | `Signal-Product-Preview.html` | Offline overview with all three paths. |
-| `SHARE-WITH-COMMUNITY.md` | Editable sharing copy and release checklist. |
 | `SOURCE.md` | Source provenance and original-file hashes. |
 
 ## Start with a draft

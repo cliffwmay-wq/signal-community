@@ -1,8 +1,7 @@
-"""Validate the ChatGPT companion and preserved Signal 0.2.0 source."""
+"""Validate the ChatGPT companion and public Signal packages."""
 
 from __future__ import annotations
 
-import hashlib
 import importlib.util
 import json
 from pathlib import Path
@@ -14,19 +13,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT.parent
-SOURCE_HASHES = {
-    "Signal-Claude-Skill.zip": "fd81bf622dc54c4316d385a9196a09d1b339d3b5f3f177eef7f159d17165f15f",
-    "Signal-Claude-Code-Plugin.zip": "e4f322b69d52201210f6ceefbd41e2c0c84d65d6dd5ee9f71b05d4570ba78d51",
-}
-
-
 class PackageTests(unittest.TestCase):
-    def test_original_releases_are_unchanged(self) -> None:
-        for name, expected in SOURCE_HASHES.items():
-            with self.subTest(name=name):
-                actual = hashlib.sha256((PROJECT / "original-release" / name).read_bytes()).hexdigest()
-                self.assertEqual(actual, expected)
-
     def test_manifest_and_skill(self) -> None:
         manifest = json.loads((ROOT / "plugin.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["$schema"], "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json")
@@ -78,25 +65,29 @@ class PackageTests(unittest.TestCase):
                 self.assertIn("signal-community/skills/signal/SKILL.md", names)
                 self.assertIn("signal-community/skills/signal/scripts/inspect_text.py", names)
 
-    def test_community_kit_retains_originals_and_adds_chatgpt(self) -> None:
+    def test_community_kit_omits_internal_sharing_draft(self) -> None:
         spec = importlib.util.spec_from_file_location("signal_release", PROJECT / "scripts/build_release.py")
         assert spec and spec.loader
         builder = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(builder)
         with tempfile.TemporaryDirectory() as temp:
             chatgpt = Path(temp) / "chatgpt.zip"
+            claude_skill = Path(temp) / "claude-skill.zip"
+            claude_code = Path(temp) / "claude-code.zip"
             kit = Path(temp) / "kit.zip"
             builder.build_chatgpt(chatgpt)
-            builder.build_kit(kit, chatgpt)
+            builder.build_claude_skill(claude_skill)
+            builder.build_claude_code(claude_code)
+            builder.build_kit(kit, chatgpt, claude_skill, claude_code)
             with zipfile.ZipFile(kit) as archive:
                 self.assertEqual(archive.testzip(), None)
                 names = archive.namelist()
                 self.assertTrue(all(name.startswith("Signal-Community-Edition/") for name in names))
                 self.assertIn("Signal-Community-Edition/Signal-Product-Preview.html", names)
                 self.assertIn("Signal-Community-Edition/Signal-ChatGPT-Plugin-v0.2.1.zip", names)
-                for name, expected in SOURCE_HASHES.items():
-                    member = archive.read("Signal-Community-Edition/" + name)
-                    self.assertEqual(hashlib.sha256(member).hexdigest(), expected)
+                self.assertFalse(any("SHARE-WITH-COMMUNITY" in name for name in names))
+            with zipfile.ZipFile(claude_code) as archive:
+                self.assertFalse(any("SHARE-WITH-COMMUNITY" in name for name in archive.namelist()))
 
 
 if __name__ == "__main__":

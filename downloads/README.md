@@ -2,18 +2,18 @@
 
 Choose one ZIP:
 
-- [Complete community kit](Signal-Community-Edition-v0.2.1.zip) — all three platform paths and documentation.
+- [Complete community kit](Signal-Community-Edition-v0.2.2.zip) — all three platform paths and documentation.
 - [ChatGPT companion](Signal-ChatGPT-Plugin-v0.2.1.zip) — the new ChatGPT plugin only.
-- [Original Claude skill](Signal-Claude-Skill.zip) — unchanged 0.2.0 release.
-- [Original Claude Code plugin](Signal-Claude-Code-Plugin.zip) — unchanged 0.2.0 release.
+- [Claude skill](Signal-Claude-Skill.zip) — rebuilt from the 0.2.0 source.
+- [Claude Code plugin](Signal-Claude-Code-Plugin.zip) — rebuilt from the 0.2.0 source with the internal sharing draft removed.
 
 The [release notes](../community-release/RELEASE-README.md) explain installation and validation. The [first-use example](../chatgpt/examples/first-use.md) shows a complete ChatGPT workflow.
 
 ## SHA-256
 
 ```text
-d571e613fdfcc036658335f78d5e4f6587c772731348627c7915651e51d15f91  Signal-ChatGPT-Plugin-v0.2.1.zip
-e4f322b69d52201210f6ceefbd41e2c0c84d65d6dd5ee9f71b05d4570ba78d51  Signal-Claude-Code-Plugin.zip
-fd81bf622dc54c4316d385a9196a09d1b339d3b5f3f177eef7f159d17165f15f  Signal-Claude-Skill.zip
-ea626a06d9e6b092360f0444c74a60a652ec7a5043c69a091b58bf8e1674d70d  Signal-Community-Edition-v0.2.1.zip
+45120e7e629e7eb484ca3c0025ae1c70520203365447a3957e0c6f435a2fdee9  Signal-ChatGPT-Plugin-v0.2.1.zip
+83abd738818557fb4123f3e4ad90605a62a07577d777973705a36d1ece529bca  Signal-Claude-Code-Plugin.zip
+d05eb022448d633241c9212e606270d6468556486d9510b775ae415dbf7d63c3  Signal-Claude-Skill.zip
+ab7f218b36bbe8241f76d1f7348b256b2be269d2cc33375160ba68ecd41d4530  Signal-Community-Edition-v0.2.2.zip
 ```

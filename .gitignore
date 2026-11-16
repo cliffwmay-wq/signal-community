@@ -3,5 +3,6 @@ __pycache__/
 *.pyc
 .venv/
 releases/
+original-release/
 profiles/
 VOICE_PROFILE.md
